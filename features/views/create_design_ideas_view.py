@@ -682,7 +682,7 @@ def create_design_ideas(request, product_id):
                     })
             
             # STEP 4 - Invoke the Stable Diffusion model from Bedrock passing all the inference parameters 
-            response = boto3_bedrock.invoke_model(body=sd_request, modelId="stability.stable-diffusion-xl")
+            response = boto3_bedrock.invoke_model(body=sd_request, modelId="stability.stable-diffusion-xl-v1")
 
             # STEP 5 - Extract image from the API response
             # Save the image to S3 bucket and the product's image gallery
